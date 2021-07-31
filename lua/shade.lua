@@ -421,6 +421,11 @@ M.toggle = function()
   end
 end
 
+M.disable = function()
+  remove_all_overlays()
+  state.active = false
+end
+
 M.autocmd = function(event, winid)
   if not state.active then
     return
